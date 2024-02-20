@@ -1,0 +1,231 @@
+{
+	"info": {
+		"_postman_id": "587c62ad-f4cc-4fc0-a7e5-350edaba70af",
+		"name": "hs-nestjs-level-1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32474844"
+	},
+	"item": [
+		{
+			"name": "user-list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5002/users",
+					"host": [
+						"localhost"
+					],
+					"port": "5002",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user-create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nama\": \"triyadhi\",\n    \"email\": \"triyadhi@domain.com\",\n    \"umur\": 20,\n    \"tanggal_lahir\": \"2004-02-20\",\n    \"role\": \"siswa\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5002/users",
+					"host": [
+						"localhost"
+					],
+					"port": "5002",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user-detail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5002/users/1708414138863",
+					"host": [
+						"localhost"
+					],
+					"port": "5002",
+					"path": [
+						"users",
+						"1708414138863"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user-update",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nama\": \"yadhi\",\n    \"email\": \"yadhi@domain.com\",\n    \"umur\": 21,\n    \"tanggal_lahir\": \"2003-02-20\",\n    \"role\": \"siswa\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5002/users/1708413261453",
+					"host": [
+						"localhost"
+					],
+					"port": "5002",
+					"path": [
+						"users",
+						"1708413261453"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user-delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:5002/users/1708413166988",
+					"host": [
+						"localhost"
+					],
+					"port": "5002",
+					"path": [
+						"users",
+						"1708413166988"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user-create-bulk-1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"nama\": \"budi\",\n        \"email\": \"budi@bulk-domain.com\",\n        \"umur\": 30,\n        \"tanggal_lahir\": \"1994-01-01\",\n        \"role\": \"admin\"\n    },\n    {\n        \"nama\": \"iwan\",\n        \"email\": \"iwan@bulk-domain.com\",\n        \"umur\": 35,\n        \"tanggal_lahir\": \"1989-01-01\",\n        \"role\": \"guru\"\n    },\n    {\n        \"nama\": \"wati\",\n        \"email\": \"wati@bulk-domain.com\",\n        \"umur\": 20,\n        \"tanggal_lahir\": \"2004-01-01\",\n        \"role\": \"siswa\"\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5002/users/bulk",
+					"host": [
+						"localhost"
+					],
+					"port": "5002",
+					"path": [
+						"users",
+						"bulk"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user-create-bulk-2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"nama\": \"bambang\",\n        \"email\": \"bambang@bulk-domain.com\",\n        \"umur\": 24,\n        \"tanggal_lahir\": \"1999-12-01\",\n        \"role\": \"guru\"\n    },\n    {\n        \"nama\": \"joko\",\n        \"email\": \"joko@bulk-domain.com\",\n        \"umur\": 25,\n        \"tanggal_lahir\": \"1998-10-01\",\n        \"role\": \"guru\"\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5002/users/bulk",
+					"host": [
+						"localhost"
+					],
+					"port": "5002",
+					"path": [
+						"users",
+						"bulk"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user-create-error-1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nama\": \"\",\n    \"email\": \"\",\n    \"umur\": 0,\n    \"tanggal_lahir\": \"\",\n    \"role\": \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5002/users",
+					"host": [
+						"localhost"
+					],
+					"port": "5002",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user-create-error-2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nama\": \"triyadhi\",\n    \"email\": \"triyadhi@domain\",\n    \"umur\": 19,\n    \"tanggal_lahir\": \"2024-01-01\",\n    \"role\": \"wali kelas\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5002/users",
+					"host": [
+						"localhost"
+					],
+					"port": "5002",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
